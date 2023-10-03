@@ -117,11 +117,11 @@ app.get('/post/:id/likes', async (req, res) => {
 // Listen on port 3000, start the server, and connect to the database
 app.listen(3000, () => {
     console.log('Server started on port 3000');
-    mongoose.connect("", { useNewUrlParser: true, useUnifiedTopology: true })
-        .then(() => {
+    mongoose.connect("mongodb+srv://Rohit:@cluster0.cakc1bn.mongodb.net/", { .then(() => {
             console.log("Connected to the database!");
         })
         .catch((error) => {
             console.error("Error connecting to the database: " + error);
-        });
+        })
+});
 });
